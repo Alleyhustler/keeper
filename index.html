@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keeper - Twitter AUTH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            background-color: #000;
+            color: #00ffff;
+            font-family: "Pixelify Sans", sans-serif;
+            height: 100%;
+            width: 100%;
+            font-size: 11px;
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .corner-logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            text-align: right;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+        }
+        
+        .corner-logo img {
+            width: 120px;
+            image-rendering: pixelated;
+            margin-bottom: 10px;
+        }
+        
+        .corner-links {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+        
+        .corner-logo a {
+            color: #00ffff;
+            text-decoration: none;
+            transition: text-shadow 0.3s;
+            font-size: 10px;
+        }
+        
+        .corner-logo a:hover {
+            text-shadow: 0 0 5px #00ffff;
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 18px;
+            background-color: #00ffff;
+            margin-left: 5px;
+            animation: blink 1s step-end infinite;
+        }
+        
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        .command-prompt {
+            color: #00ffff;
+            margin-bottom: 15px;
+        }
+        
+        .command-prompt::before {
+            content: "root@keeper:~$ ";
+            color: #00aaff;
+        }
+        
+        .output-text {
+            color: #00ffff;
+            margin-left: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .ascii-art {
+            color: #00ffff;
+            font-size: 10px;
+            line-height: 1.2;
+            margin: 20px 0;
+            white-space: pre;
+            font-family: monospace;
+        }
+        
+        h1, h2, h3 {
+            color: #00ffff;
+            border-bottom: 1px solid #00ffff;
+            padding-bottom: 5px;
+            font-size: 16px;
+        }
+        
+        .feature {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        .feature-name {
+            color: #ffcc00;
+        }
+        
+        .code-block {
+            background-color: #000000;
+            border: none;
+            padding: 15px;
+            white-space: pre;
+            color: #00ffff;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
+        }
+        
+        .loading {
+            margin-top: 20px;
+            animation: loadingDots 1.5s infinite;
+        }
+        
+        @keyframes loadingDots {
+            0%, 20% { content: "."; }
+            40% { content: ".."; }
+            60% { content: "..."; }
+            80%, 100% { content: ""; }
+        }
+        
+        .loading::after {
+            content: "";
+            animation: loadingDots 1.5s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="corner-logo">
+        <!-- Replace with your actual PNG logo path -->
+        <img src="xWM6VtZQ_400x400.jpg" alt="KEEPER Logo" style="filter: hue-rotate(0deg) brightness(1.2) contrast(1.2);">
+        <div class="corner-links">
+            <a href="https://x.com/Rug_keeper" target="_blank">TWITTER</a>
+            <a href="https://pump.fun/profile/DV1L2Axgy6Ff4YDrpe1VMN82GPBLhRKH3TSimVYCzorD" target="_blank">CA</a>
+        </div>
+    </div>
+    
+    <div class="command-prompt">login --user admin --secure</div>
+    <div class="output-text">Authentication successful. Welcome to KEEPER system.</div>
+    
+    <div class="command-prompt">cat keeper_logo.txt</div>
+    <div class="ascii-art">
+ _  __  _____  _____  ____  _____  ____  
+| |/ / | ____|| ____||  _ \| ____||  _ \ 
+| ' /  |  _|  |  _|  | |_) |  _|  | |_) |
+| . \  | |___ | |___ |  __/| |___ |  _ < 
+|_|\_\ |_____||_____||_|   |_____||_| \_\
+    </div>
+    
+    <div class="command-prompt">cat readme.md</div>
+    <div class="output-text">
+        <h1>KEEPER - TWITTER AUTH</h1>
+        <p>"Watching the shadows so you don't have to."</p>
+    </div>
+    
+    <div class="command-prompt">keeper --list-features</div>
+    <div class="output-text">
+        <h2>FEATURES</h2>
+        <div class="feature">
+            <span class="feature-name">> Cryptic Warnings:</span> Automated tweets hinting at rug pulls, scams, and hidden contract flaws.
+        </div>
+        <div class="feature">
+            <span class="feature-name">> Enigmatic Replies:</span> Ominous responses to comments—30% chance per interaction.
+        </div>
+        <div class="feature">
+            <span class="feature-name">> Stealth Mode:</span> Randomized delays (1-10 mins) to avoid detection.
+        </div>
+        <div class="feature">
+            <span class="feature-name">> Community Radar:</span> Scans for "crypto safety" tweets to engage with (likes/retweets).
+        </div>
+    </div>
+    
+    <div class="command-prompt">cat tech_specs.py</div>
+    <div class="code-block"># KEEPER BOT v1.0  
+INTERVAL = 600  # 10-minute cycles  
+RISK_LEVEL = "HIGH"  # Paranoia mode enabled  
+LANGUAGE = "Cryptic"  # ALL</div>
+    
+    <div class="command-prompt">keeper --status</div>
+    <div class="output-text">
+        <p>SYSTEM STATUS: MONITORING<span class="loading"></span></p>
+        <p>KEEPER © 2025 | All shadow operations active</p>
+    </div>
+    
+    <div class="command-prompt">_<span class="cursor"></span></div>
+</body>
+</html>
